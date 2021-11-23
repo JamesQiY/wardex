@@ -18,6 +18,10 @@ ChartJS.register(
 );
 
 function getData(playerData) {
+  const r = ~~(Math.random() * 255);
+  const b = ~~(Math.random() * 255);
+  const g = ~~(Math.random() * 255);
+
   const ratingArr = [
     playerData.opening,
     playerData.formation,
@@ -33,8 +37,8 @@ function getData(playerData) {
       {
         label: 'Rating',
         data: ratingArr,
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: `rgba(${r}, ${g}, ${b}, 0.2)`,
+        borderColor: `rgba(${r}, ${g}, ${b}, 1)`,
         borderWidth: 1,
       },
     ],
