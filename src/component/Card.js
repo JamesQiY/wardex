@@ -34,7 +34,7 @@ const Card = ({ playerArr, darkTheme }) => {
   }
 
   return (
-    <div className="player_cards mx-0.5 my-2" id={player.name}>
+    <div className="player_cards mx-0.5 my-2">
       <div className="player_title"> {player.name} </div>
       <div className="info-container flex flex-col items-center justify-center xl:lg:md:sm:flex-row w-full">
         <div className="flex flex-col items-center justify-center p-1 w-full xl:lg:md:w-5/12">

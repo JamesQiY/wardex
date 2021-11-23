@@ -34,6 +34,7 @@
     @apply
     m-2 p-1 max-w-2xl min-w-full sm:min-w-lg lg:min-w-xl xl:min-w-xl
     flex flex-1 flex-col rounded-3xl 
+    border-2 dark:border-0 border-gray-500 border-opacity-20
     bg-gray-100 dark:bg-truegray-700 shadow-md
   }
 
