@@ -7,7 +7,7 @@ const iconSize = '2rem'
 
 const Sidebar = ({darkTheme, setDarkTheme}) => {
   return (
-    <div className='top-0 left-0 w-16 h-full m-0 pt-4 flex flex-col flex-none bg-white dark:bg-gray-700 text-white shadow-lg'>
+    <div className='top-0 left-0 w-12 sm:w-16 h-full m-0 pt-4 flex flex-col flex-none bg-white dark:bg-gray-700 text-white shadow-lg'>
       <Link to="/">
         <SideBarIcon icon={<FaHome size={iconSize} />} text='Home' />
       </Link>

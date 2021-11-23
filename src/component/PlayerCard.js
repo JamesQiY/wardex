@@ -24,7 +24,8 @@ const PlayerCards = ({ darkTheme }) => {
   }, []);
 
   return (
-    <div className="card-container">
+    <div className="card-container max-w-full flex flex-col lg:flex-row flex-wrap
+      justify-center">
       {genAll(players, darkTheme)}
     </div>
   );

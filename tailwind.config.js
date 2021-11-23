@@ -27,6 +27,7 @@ module.exports = {
       },
       maxWidth: {
         '100': '100px',
+        '250': '250px',
         '500': '500px',
       },
       flex: {

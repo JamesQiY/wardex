@@ -11,7 +11,7 @@ const Home = () => {
     <div className="page-container h-full flex flex-row dark:bg-gray-600">
       <Sidebar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
       <div className="home-container flex-1 overflow-auto">
-        <div className='content-container flex flex-col items-center justify-center p-2'>
+        <div className='content-container flex flex-col items-center justify-center p-1'>
           <Header className='header' />
           <PlayerCards darkTheme={darkTheme}/>
         </div>
