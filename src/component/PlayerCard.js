@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import Card from './Card';
-
-// globals
-const port = 9000;
 
 function genAll(players, darkTheme) {
   let total = <></>
@@ -18,7 +14,7 @@ function genAll(players, darkTheme) {
 const PlayerCards = ({ darkTheme }) => {
   const [players, setplayers] = useState([]);
   useEffect(() => {
-    const url = "http://" + window.location.hostname + ":" + port + "/all";
+    const url = "https://wardex.herokuapp.com/all";
     axios.get(url).then(
       res => {
         res.data.shift()

@@ -13,7 +13,7 @@ const Sidebar = ({darkTheme, setDarkTheme}) => {
       </Link>
       <LinkIcon link='https://docs.google.com/spreadsheets/d/160v8V_LBMy8vy48-IEJWKQzVxJKMtNmY5Ft96eH2-ug/edit?usp=sharing' 
         icon={<FaFile size={iconSize} />} text='Google Sheets' />
-      {/* <LinkIcon link='https://github.com/JamesQiY' icon={<FaGithub size={iconSize} />} text='Github' /> */}
+      <LinkIcon link='https://github.com/JamesQiY/Wardex' icon={<FaGithub size={iconSize} />} text='Github' />
 
       <ThemeIcon darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
     </div>
