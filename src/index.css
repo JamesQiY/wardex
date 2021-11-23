@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar_icon {
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto 
+    shadow-xl dark:shadow-md
+    bg-truegray-200 dark:bg-gray-800 text-red-400 rounded-3xl
+    hover:bg-red-700 hover:rounded-xl
+    transition-all duration-200 ease-linear;
+  }
+
+  .sidebar_text {
+    @apply absolute w-auto h-auto m-2 p-2 min-w-max left-14 rounded-md 
+    shadow-xl dark:shadow-md
+    text-black dark:text-white 
+    bg-white dark:bg-gray-800
+    text-lg z-50
+    transition-all duration-100 scale-0 origin-left;
+  }
+
+  .header {
+    @apply
+    m-2 p-2
+    text-5xl font-sans font-bold rounded-xl
+    text-center justify-center align-middle
+    text-white dark:text-black
+    bg-gray-800 dark:bg-white
+    shadow-lg;
+  }
+
+  .player_cards {
+    @apply
+    m-2 p-1 max-w-2xl min-w-full sm:min-w-lg lg:min-w-xl xl:min-w-xl
+    flex flex-1 flex-col rounded-3xl 
+    bg-gray-100 dark:bg-truegray-700 shadow-md
+  }
+
+  .player_title {
+    @apply
+    p-3 m-1 rounded-3xl
+    text-3xl font-sans font-bold
+    text-black dark:text-white 
+    bg-gray-300 dark:bg-gray-900 shadow-md dark:shadow-lg;
+  }
+
+  .pill {
+    @apply
+    m-1.5 px-2 py-1 rounded-full text-xs
+    flex text-center items-center justify-center
+    text-white dark:text-black bg-gray-700 dark:bg-gray-100
+  }
+}
+
+html, body, #root{
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+  margin-right: 1px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: lightslategrey;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+}
