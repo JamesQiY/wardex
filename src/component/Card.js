@@ -47,7 +47,7 @@ const Card = ({ playerArr, darkTheme }) => {
             <span>Weaknesses:</span>
             <div className="pill bg-red-600 dark:bg-red-600 text-white dark:text-white shadow-lg"> {player.weaknesses} </div>
           </div>
-          <p className="m-2 p-2 break-all dark:text-white"> {player.description} </p>
+          <p className="m-2 p-2 break-words dark:text-white"> {player.description} </p>
         </div>
 
         <div className="m-2 p-2 xl:lg:md:sm:flex-grow max-w-250"><Graph playerData={player} darkTheme={darkTheme} key={darkTheme} /></div>
