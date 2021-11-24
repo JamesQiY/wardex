@@ -11,7 +11,7 @@ const Card = ({ playerObj, darkTheme }) => {
   }
   return (
     <div className="player_cards mx-0.5 my-2 max-w-full">
-      <div className="player_title"> {playerObj.name} </div>
+      <div className="player_title break-all"> {playerObj.name} </div>
       <div className="info-container flex flex-col sm:flex-row items-center justify-center max-w-full">
         <div className="flex flex-col items-center justify-center p-1 w-full xl:lg:md:w-7/12">
           <div className="my-2"> {commanders} </div>
