@@ -9,8 +9,6 @@ const Card = ({ playerObj, darkTheme }) => {
   if (Object.keys(playerObj).length !== 0) {
     commanders = <Commanders commanderList={playerObj.commanders.split(',')}/>
   }
-  console.log(playerObj)
-
   return (
     <div className="player_cards mx-0.5 my-2 max-w-full">
       <div className="player_title"> {playerObj.name} </div>

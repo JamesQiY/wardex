@@ -4,7 +4,6 @@ import Card from './Card';
 
 function genAll(players, mapping, darkTheme) {
   let total = <></>
-  console.log(mapping)
   if (players && players.length > 0) {
     total = players.map(arr => {
       let playerObj = {}
