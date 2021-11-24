@@ -17,10 +17,25 @@ ChartJS.register(
   Tooltip
 );
 
-function getData(playerData) {
-  const r = ~~(Math.random() * 255);
-  const b = ~~(Math.random() * 255);
-  const g = ~~(Math.random() * 255);
+function generateDarkColor() {
+  const red = ~~(Math.random() * 256/2);
+  const green = ~~(Math.random() * 256/2);
+  const blue = ~~(Math.random() * 256/2);
+  return [`rgb(${red},${green}, ${blue}, 1)`, `rgb(${red},${green}, ${blue}, 0.4)`];
+}
+function generateLightColor() {
+  const red = ~~((1 + Math.random()) * 256/2);
+  const green = ~~((1 + Math.random()) * 256/2);
+  const blue = ~~((1 + Math.random()) * 256/2);
+  return [`rgb(${red},${green}, ${blue}, 1)`, `rgb(${red},${green}, ${blue}, 0.4)`];
+}
+
+function getColor(darkTheme) {
+  return darkTheme? generateLightColor() : generateDarkColor();
+}
+
+function getData(playerData, darkTheme) {
+  const [borderColor,backgroundColor] = getColor(darkTheme);
 
   const ratingArr = [
     playerData.opening,
@@ -37,9 +52,9 @@ function getData(playerData) {
       {
         label: 'Rating',
         data: ratingArr,
-        backgroundColor: `rgba(${r}, ${g}, ${b}, 0.2)`,
-        borderColor: `rgba(${r}, ${g}, ${b}, 1)`,
-        borderWidth: 1,
+        backgroundColor: backgroundColor,
+        borderColor: borderColor,
+        borderWidth: 2,
       },
     ],
   };
@@ -48,19 +63,19 @@ function getData(playerData) {
 
 
 const Graph = ({ playerData = {}, darkTheme }) => {
-  const data = getData(playerData);
-  const borderColor = darkTheme? "rgba(255, 255, 255, 0.7)": "rgba(0, 0, 0, 0.4)" ;
+  const data = getData(playerData, darkTheme);
+  const borderColor = darkTheme ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.6)";
 
   const chartOptions = {
     layout: {
       padding: {
-        left: 5
+        left: 2
       }
     },
     scales: {
       r: {
-        angleLines: { color: borderColor},
-        grid: { color: borderColor},
+        angleLines: { color: borderColor },
+        grid: { color: borderColor },
         min: 1,
         max: 10,
         ticks: {

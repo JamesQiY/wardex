@@ -20,16 +20,6 @@
     transition-all duration-100 scale-0 origin-left;
   }
 
-  .header {
-    @apply
-    m-2 p-2
-    text-5xl font-sans font-bold rounded-xl
-    text-center justify-center align-middle
-    text-white dark:text-black
-    bg-gray-800 dark:bg-white
-    shadow-lg;
-  }
-
   .player_cards {
     @apply
     m-2 p-1 max-w-2xl min-w-full sm:min-w-lg lg:min-w-xl xl:min-w-xl
