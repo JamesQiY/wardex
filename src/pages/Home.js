@@ -14,8 +14,11 @@ const Home = () => {
         <div className='content-container flex flex-col items-center justify-center p-1'>
           <Header className='header' />
           <PlayerCards darkTheme={darkTheme}/>
+          <div className="m-1 p-1 text-center w-full bg-white rounded-lg">
+            Credit to <a href="https://chucklefish.org/">Chucklefish</a> for all images.</div>
         </div>
       </div>
+      
     </div>
   )
 };
