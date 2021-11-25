@@ -7,7 +7,7 @@ import DetailedCard from '../component/DetailedCard';
 import Footer from '../component/Footer';
 
 function getPlayer(players, playerId) {
-  if (!players || players.length <=0) return -1
+  if (!players || players.length <= 0) return -1
   playerId = playerId.toLowerCase();
 
   let low = 0;
@@ -26,23 +26,22 @@ function getPlayer(players, playerId) {
   return -1;
 }
 
-const PlayerDetail = ({players}) => {
+const PlayerDetail = ({ players }) => {
   let [darkTheme, setDarkTheme] = enableDarkMode();
   const playerId = useParams();
   const playerIndex = getPlayer(players, playerId.player);
 
-  const playerObj = playerIndex >=0 ? players[playerIndex] : {};
+  const playerObj = playerIndex >= 0 ? players[playerIndex] : {};
 
   return (
-    <div className="page-container ">
+    <div className="page-container">
       <Sidebar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
       <div className="home-container flex-1 overflow-auto">
         <div className='content-container flex flex-col items-center justify-center p-1'>
-          <DetailedCard darkTheme={darkTheme} player={playerObj}/>
+          <DetailedCard darkTheme={darkTheme} player={playerObj} />
         </div>
-         <Footer />
+        <Footer />
       </div>
-     
     </div>
   )
 };
