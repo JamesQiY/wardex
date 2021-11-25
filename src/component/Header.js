@@ -8,7 +8,7 @@ const Header = () => {
     bg-gray-800 dark:bg-gray-100 shadow-inner shadow-lg;">
       <img src={process.env.PUBLIC_URL + '/logo.png'} alt={"WarDex"} className="text-2xl font-bold sm:w-1/4" height={200} 
       width={400}/>
-      <span className="">A collection of the finest memebers of the Wargroove Community</span>
+      <span className="">A collection of the finest members of the Wargroove Community</span>
     </div>
   )
 };
