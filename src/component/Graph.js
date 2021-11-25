@@ -18,36 +18,28 @@ ChartJS.register(
 );
 
 function generateDarkColor() {
-  const red = ~~(Math.random() * 256/2);
-  const green = ~~(Math.random() * 256/2);
-  const blue = ~~(Math.random() * 256/2);
+  const red = ~~(Math.random() * 256 / 2);
+  const green = ~~(Math.random() * 256 / 2);
+  const blue = ~~(Math.random() * 256 / 2);
   return [`rgb(${red},${green}, ${blue}, 1)`, `rgb(${red},${green}, ${blue}, 0.4)`];
 }
 function generateLightColor() {
-  const red = ~~((1 + Math.random()) * 256/2);
-  const green = ~~((1 + Math.random()) * 256/2);
-  const blue = ~~((1 + Math.random()) * 256/2);
+  const red = ~~((1 + Math.random()) * 256 / 2);
+  const green = ~~((1 + Math.random()) * 256 / 2);
+  const blue = ~~((1 + Math.random()) * 256 / 2);
   return [`rgb(${red},${green}, ${blue}, 1)`, `rgb(${red},${green}, ${blue}, 0.4)`];
 }
 
-function getColor(darkTheme) {
-  return darkTheme? generateLightColor() : generateDarkColor();
-}
+function getData(playerData, label, darkTheme) {
+  const [borderColor, backgroundColor] = darkTheme ? generateLightColor() : generateDarkColor();
 
-function getData(playerData, darkTheme) {
-  const [borderColor,backgroundColor] = getColor(darkTheme);
-
-  const ratingArr = [
-    playerData.opening,
-    playerData.formation,
-    playerData.unit,
-    playerData.economy,
-    playerData.speed,
-    playerData.tactics
-  ]
+  let ratingArr = [];
+  for (const key of label) {
+    ratingArr.push(playerData[key.toLowerCase()])
+  }
 
   const data = {
-    labels: ['Opening', 'Formation', 'Unit Comp', 'Economy', 'Speed', 'Tactics'],
+    labels: label,
     datasets: [
       {
         label: 'Rating',
@@ -61,17 +53,13 @@ function getData(playerData, darkTheme) {
   return data;
 }
 
+const Graph = ({ playerData = {}, label = [], darkTheme }) => {
+  let data = getData(playerData, label, darkTheme);
 
-const Graph = ({ playerData = {}, darkTheme }) => {
-  const data = getData(playerData, darkTheme);
   const borderColor = darkTheme ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.6)";
 
   const chartOptions = {
-    layout: {
-      padding: {
-        left: 2
-      }
-    },
+    layout: { padding: { left: 2 } },
     scales: {
       r: {
         angleLines: { color: borderColor },

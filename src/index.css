@@ -20,9 +20,9 @@
     transition-all duration-100 scale-0 origin-left;
   }
 
-  .player_cards {
+  .cards {
     @apply
-    m-2 p-1 max-w-2xl min-w-full sm:min-w-lg lg:min-w-xl xl:min-w-xl
+    mx-0.5 my-2 p-1 max-w-xl min-w-full sm:min-w-lg xl:lg:min-w-xl 
     flex flex-1 flex-col rounded-3xl 
     border-2 dark:border-0 border-gray-500 border-opacity-20
     bg-gray-100 dark:bg-truegray-700 shadow-md
@@ -31,7 +31,7 @@
   .player_title {
     @apply
     p-3 m-1 rounded-3xl
-    text-3xl font-sans font-bold
+    text-3xl font-sans font-bold break-all
     text-black dark:text-white 
     bg-gray-300 dark:bg-gray-900 shadow-md dark:shadow-lg;
   }
@@ -41,6 +41,10 @@
     m-1.5 px-2 py-1 rounded-full text-xs
     flex text-center items-center justify-center
     text-white dark:text-black bg-gray-700 dark:bg-gray-100
+  }
+
+  .page-container {
+    @apply h-full flex flex-row dark:bg-gray-600
   }
 }
 
