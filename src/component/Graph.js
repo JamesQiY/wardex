@@ -39,7 +39,7 @@ function getData(playerData, label, darkTheme) {
   }
 
   const data = {
-    labels: label,
+    labels: label.map(label => label.split(' ')),
     datasets: [
       {
         label: 'Rating',
