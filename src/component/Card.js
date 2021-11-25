@@ -9,7 +9,8 @@ const labels = [
   'Unit Comp',
   'Economy',
   'Speed',
-  'Tactics']
+  'Tactics'];
+
 
 // player Obj = {} with the fields 
 const Card = ({ playerObj, darkTheme }) => {
@@ -19,9 +20,13 @@ const Card = ({ playerObj, darkTheme }) => {
   }
   return (
     <div className="cards">
-      <Link to={"/player/" + playerObj.name} >
-        <div className="player_title"> {playerObj.name} </div>
-      </Link>
+      <div className="player_title flex flex-col">
+        {playerObj.name}
+        <Link to={"/player/" + playerObj.name}>
+          <button className="p-1 w-full text-sm dark:text-white text-black
+          bg-red-400 dark:bg-red-500 rounded-lg shadow-lg">Details</button>
+        </Link>
+      </div>
       <div className="info-container flex flex-col sm:flex-row items-center justify-center max-w-full">
         <div className="flex flex-col items-center justify-center p-1 w-full xl:lg:md:w-7/12">
           <div className="my-2"> {commanders} </div>

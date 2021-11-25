@@ -59,7 +59,7 @@ const Graph = ({ playerData = {}, label = [], darkTheme }) => {
   const borderColor = darkTheme ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.6)";
 
   const chartOptions = {
-    layout: { padding: { left: 2 } },
+    layout: { padding: { left: 2, right:2 } },
     scales: {
       r: {
         angleLines: { color: borderColor },

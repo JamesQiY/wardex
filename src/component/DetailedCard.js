@@ -3,7 +3,8 @@ import Commanders from './Commanders';
 import Graph from './Graph';
 
 const basicLabels = ['Opening', 'Formation', 'Unit Comp', 'Economy', 'Speed', 'Tactics']
-const advLabels = ['Consistency', 'Lethal', 'Comeback', 'PvE', 'Puzzles', 'PvP Mapping', 'Custom Mapping']
+const advLabels = ['Consistency', 'Lethal', 'Comeback']
+const mapLabels = ['PvE', 'Puzzles', 'PvP Mapping', 'Custom Mapping']
 
 
 const DetailedCard = ({ darkTheme, player }) => {
@@ -30,6 +31,7 @@ const DetailedCard = ({ darkTheme, player }) => {
         <div className="m-1 p-1 pl-3 flex flex-col md:flex-row  items-center justify-center">
           <div className="m-2 max-w-250 sm:max-w-350"><Graph playerData={player} label={basicLabels} darkTheme={darkTheme} /> </div>
           <div className="m-2 max-w-250 sm:max-w-350"><Graph playerData={player} label={advLabels} darkTheme={darkTheme} /></div>
+          <div className="m-2 max-w-250 sm:max-w-350"><Graph playerData={player} label={mapLabels} darkTheme={darkTheme} /></div>
         </div>
       </div>
     </div>
