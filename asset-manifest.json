@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/wardex/static/css/main.0a047df5.chunk.css",
-    "main.js": "/wardex/static/js/main.897e2278.chunk.js",
-    "main.js.map": "/wardex/static/js/main.897e2278.chunk.js.map",
+    "main.css": "/wardex/static/css/main.504391f3.chunk.css",
+    "main.js": "/wardex/static/js/main.d05ed543.chunk.js",
+    "main.js.map": "/wardex/static/js/main.d05ed543.chunk.js.map",
     "runtime-main.js": "/wardex/static/js/runtime-main.3f639f0f.js",
     "runtime-main.js.map": "/wardex/static/js/runtime-main.3f639f0f.js.map",
-    "static/js/2.af720fcd.chunk.js": "/wardex/static/js/2.af720fcd.chunk.js",
-    "static/js/2.af720fcd.chunk.js.map": "/wardex/static/js/2.af720fcd.chunk.js.map",
+    "static/js/2.db4b3681.chunk.js": "/wardex/static/js/2.db4b3681.chunk.js",
+    "static/js/2.db4b3681.chunk.js.map": "/wardex/static/js/2.db4b3681.chunk.js.map",
     "index.html": "/wardex/index.html",
-    "static/css/main.0a047df5.chunk.css.map": "/wardex/static/css/main.0a047df5.chunk.css.map",
-    "static/js/2.af720fcd.chunk.js.LICENSE.txt": "/wardex/static/js/2.af720fcd.chunk.js.LICENSE.txt"
+    "static/css/main.504391f3.chunk.css.map": "/wardex/static/css/main.504391f3.chunk.css.map",
+    "static/js/2.db4b3681.chunk.js.LICENSE.txt": "/wardex/static/js/2.db4b3681.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3f639f0f.js",
-    "static/js/2.af720fcd.chunk.js",
-    "static/css/main.0a047df5.chunk.css",
-    "static/js/main.897e2278.chunk.js"
+    "static/js/2.db4b3681.chunk.js",
+    "static/css/main.504391f3.chunk.css",
+    "static/js/main.d05ed543.chunk.js"
   ]
 }
