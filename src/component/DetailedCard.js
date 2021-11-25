@@ -3,7 +3,7 @@ import Commanders from './Commanders';
 import Graph from './Graph';
 
 const basicLabels = ['Opening', 'Formation', 'Unit Comp', 'Economy', 'Speed', 'Tactics']
-const advLabels = ['Consistency', 'Lethal', 'Comeback', 'PvE', 'Puzzles', 'Mapping', 'Custom Mapping']
+const advLabels = ['Consistency', 'Lethal', 'Comeback', 'PvE', 'Puzzles', 'PvP Mapping', 'Custom Mapping']
 
 
 const DetailedCard = ({ darkTheme, player }) => {
