@@ -1,6 +1,6 @@
 import React from 'react';
 import Commanders from './Commanders';
-import Graph from './Graph';
+import Graph from '../Graph';
 import { Link } from 'react-router-dom';
 
 const labels = [

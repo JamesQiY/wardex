@@ -3,7 +3,7 @@ import { PageContext } from '../hooks/PageContext';
 
 import { useParams } from 'react-router-dom'
 
-import DetailedCard from '../component/DetailedCard';
+import DetailedCard from '../component/card_related/DetailedCard';
 import Footer from '../component/Footer';
 
 
