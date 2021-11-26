@@ -1,35 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
+import React, {useContext} from 'react';
+import { PageContext } from '../hooks/PageContext';
 import Card from './Card';
-
-// globals
-const port = 9000;
+import LoadingSpin from './LoadingSpin';
 
 function genAll(players, darkTheme) {
   let total = <></>
   if (players && players.length > 0) {
-    total = players.map(arr =>
-      <Card playerArr={arr} darkTheme={darkTheme} key={arr} />)
+    total = players.map(obj => {
+      return <Card playerObj={obj} darkTheme={darkTheme} key={obj.name}/>
+    })
   }
   return total;
 }
 
-const PlayerCards = ({ darkTheme }) => {
-  const [players, setplayers] = useState([]);
-  useEffect(() => {
-    const url = "http://" + window.location.hostname + ":" + port + "/all";
-    axios.get(url).then(
-      res => {
-        res.data.shift()
-        setplayers(res.data);
-      }
-    )
-  }, []);
+const PlayerCards = () => {
+  const states = useContext(PageContext)
 
   return (
-    <div className="card-container">
-      {genAll(players, darkTheme)}
+    <div className="card-container min-w-full max-w-full flex flex-col lg:flex-row flex-wrap justify-center">
+      {(states.players.length > 0) ? genAll(states.players, states.darkTheme) : <LoadingSpin/>}
     </div>
   );
 }

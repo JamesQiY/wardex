@@ -5,7 +5,7 @@ function getCommanders(commanderList) {
   commanderList = commanderList.slice(0,threshold + 1);
   const commanderElements = commanderList.map(name =>
     <div key={name}>
-      <img src={'sprites/' + name.toLowerCase().trim() + '.png'} alt={name} />
+      <img src={process.env.PUBLIC_URL + '/sprites/' + name.toLowerCase().trim() + '.png'} alt={name} />
     </div>)
 
   return commanderElements;

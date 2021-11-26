@@ -1,21 +1,26 @@
-import { FaHome, FaSun, FaMoon, FaGithub, FaFile} from 'react-icons/fa';
+import { FaHome, FaSun, FaMoon, FaGithub, FaPen, FaInfo } from 'react-icons/fa';
+import React, {useContext} from 'react';
+import { PageContext } from '../hooks/PageContext';
 import { Link } from 'react-router-dom';
-import React from 'react';
 
-// globals
 const iconSize = '2rem'
 
-const Sidebar = ({darkTheme, setDarkTheme}) => {
+const Sidebar = () => {
+  const states = useContext(PageContext)
+  let darkTheme = states.darkTheme;
+  let setDarkTheme = states.setDarkTheme;
+
   return (
-    <div className='top-0 left-0 w-16 h-full m-0 pt-4 flex flex-col flex-none bg-white dark:bg-gray-700 text-white shadow-lg'>
+    <div className='top-0 left-0 w-12 sm:w-16 h-full m-0 pt-4 flex flex-col flex-none bg-white dark:bg-gray-700 text-white shadow-lg'>
       <Link to="/">
         <SideBarIcon icon={<FaHome size={iconSize} />} text='Home' />
       </Link>
-      <LinkIcon link='https://docs.google.com/spreadsheets/d/160v8V_LBMy8vy48-IEJWKQzVxJKMtNmY5Ft96eH2-ug/edit?usp=sharing' 
-        icon={<FaFile size={iconSize} />} text='Google Sheets' />
-      {/* <LinkIcon link='https://github.com/JamesQiY' icon={<FaGithub size={iconSize} />} text='Github' /> */}
-
-      <ThemeIcon darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+      <Link to="/About">
+        <SideBarIcon icon={<FaInfo size={iconSize} />} text='About/help' />
+      </Link>
+      <LinkIcon link='https://forms.gle/SevNUmM1a75Wy38LA' icon={<FaPen size={iconSize} />} text='Form' />
+      <LinkIcon link='https://github.com/JamesQiY/Wardex' icon={<FaGithub size={iconSize} />} text='Github' />
+      <ThemeIcon darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
     </div>
   )
 };
@@ -37,7 +42,7 @@ const LinkIcon = ({ link = '', icon, text = 'tooltip', download = false }) => {
   );
 };
 
-const ThemeIcon = ({darkTheme, setDarkTheme}) => {
+const ThemeIcon = ({ darkTheme, setDarkTheme }) => {
   const toggle = () => setDarkTheme(!darkTheme);
   return (
     <div onClick={toggle}>

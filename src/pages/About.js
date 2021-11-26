@@ -1,18 +1,19 @@
 import React from 'react';
+
 import Header from '../component/Header'
 import Footer from '../component/Footer';
-import PlayerCards from '../component/PlayerCard';
+import AboutInfo from '../component/AboutInfo';
 
-const Home = () => {
+const About = () => {
   return (
     <div className="home-container flex-1 overflow-auto">
       <div className='content-container flex flex-col items-center justify-center p-1'>
-        <Header/>
-        <PlayerCards/>
-        <Footer/>
+        <Header />
+        <AboutInfo />
+        <Footer />
       </div>
     </div>
   )
-};
+}
 
-export default Home;
+export default About;
