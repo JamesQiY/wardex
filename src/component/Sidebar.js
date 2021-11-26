@@ -1,11 +1,15 @@
 import { FaHome, FaSun, FaMoon, FaGithub, FaPen, FaInfo } from 'react-icons/fa';
+import React, {useContext} from 'react';
+import { PageContext } from '../hooks/PageContext';
 import { Link } from 'react-router-dom';
-import React from 'react';
 
-// globals
 const iconSize = '2rem'
 
-const Sidebar = ({ darkTheme, setDarkTheme }) => {
+const Sidebar = () => {
+  const states = useContext(PageContext)
+  let darkTheme = states.darkTheme;
+  let setDarkTheme = states.setDarkTheme;
+
   return (
     <div className='top-0 left-0 w-12 sm:w-16 h-full m-0 pt-4 flex flex-col flex-none bg-white dark:bg-gray-700 text-white shadow-lg'>
       <Link to="/">

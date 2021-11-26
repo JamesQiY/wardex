@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Sidebar from './component/Sidebar';
 import Main from './component/Main';
-import axios from 'axios';
+import PageProvider from './hooks/PageContext';
 
 function App() {
-  const [players, setplayers] = useState([]);
-  useEffect(() => {
-    const url = "https://wardex.herokuapp.com/all";
-    axios.get(url).then(
-      res => {
-        setplayers(res.data);
-      }
-    )
-  }, []);
-
   return (
-    <div className="h-full">
-      <Main players={players}/>
+    <div className="h-full page-container">
+      <PageProvider>
+        <Sidebar/>
+        <Main/>
+      </PageProvider>
     </div>
   );
 }

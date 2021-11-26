@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { PageContext } from '../hooks/PageContext';
 import Card from './Card';
+import LoadingSpin from './LoadingSpin';
 
 function genAll(players, darkTheme) {
   let total = <></>
@@ -11,11 +13,12 @@ function genAll(players, darkTheme) {
   return total;
 }
 
-const PlayerCards = ({players, darkTheme}) => {
+const PlayerCards = () => {
+  const states = useContext(PageContext)
+
   return (
-    <div className="card-container min-w-full max-w-full flex flex-col lg:flex-row flex-wrap
-      justify-center">
-      {genAll(players, darkTheme)}
+    <div className="card-container min-w-full max-w-full flex flex-col lg:flex-row flex-wrap justify-center">
+      {(states.players.length > 0) ? genAll(states.players, states.darkTheme) : <LoadingSpin/>}
     </div>
   );
 }

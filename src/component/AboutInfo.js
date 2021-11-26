@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutInfo = ({children}) => {
+const AboutInfo = props => {
   return (
     <div className="m-2 p-4 rounded-xl w-full flex flex-col
     text-center justify-center items-center
@@ -15,7 +15,7 @@ const AboutInfo = ({children}) => {
       <span>Features are still being developed, so expect some visual/functional bugs</span>
       <span>Site made by Jams</span>
 
-      {children}
+      {props.children}
     </div>
   )
 }

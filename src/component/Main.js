@@ -4,12 +4,12 @@ import Home from '../pages/Home.js';
 import PlayerDetail from '../pages/PlayerDetail.js';
 import About from '../pages/About.js'
 
-const Main = ({players}) => {
+const Main = () => {
   return (
     <Routes > {/* The Routes decides which component to show based on the current URL.*/}
-      <Route exact path='/' element={<Home players={players}/>}></Route>
+      <Route exact path='/' element={<Home/>}></Route>
       <Route exact path='/About' element={<About/>}></Route>
-      <Route exact path='/player/:player' element={<PlayerDetail players={players}/>}></Route>
+      <Route exact path='/player/:player' element={<PlayerDetail/>}></Route>
     </Routes>
   );
 }
