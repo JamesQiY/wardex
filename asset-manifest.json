@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wardex/static/css/main.5e1f240f.chunk.css",
-    "main.js": "/wardex/static/js/main.43ce3ca3.chunk.js",
-    "main.js.map": "/wardex/static/js/main.43ce3ca3.chunk.js.map",
+    "main.js": "/wardex/static/js/main.20df1f84.chunk.js",
+    "main.js.map": "/wardex/static/js/main.20df1f84.chunk.js.map",
     "runtime-main.js": "/wardex/static/js/runtime-main.3f639f0f.js",
     "runtime-main.js.map": "/wardex/static/js/runtime-main.3f639f0f.js.map",
     "static/js/2.b39d9145.chunk.js": "/wardex/static/js/2.b39d9145.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.3f639f0f.js",
     "static/js/2.b39d9145.chunk.js",
     "static/css/main.5e1f240f.chunk.css",
-    "static/js/main.43ce3ca3.chunk.js"
+    "static/js/main.20df1f84.chunk.js"
   ]
 }
