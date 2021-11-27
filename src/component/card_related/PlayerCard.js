@@ -8,7 +8,7 @@ function genAll(players, darkTheme) {
   let total = <></>
   if (players && players.length > 0) {
     total = players.map(obj => {
-      return <Card playerObj={obj} darkTheme={darkTheme} key={obj.name} />
+      return <Card playerObj={obj} darkTheme={darkTheme} key={obj.id} />
     })
   }
   return total;

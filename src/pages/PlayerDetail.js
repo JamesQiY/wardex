@@ -12,8 +12,8 @@ const PlayerDetail = () => {
   let players = states.players;
   let darkTheme = states.darkTheme;
 
-  const playerId = useParams();
-  const playerIndex = getPlayer(players, playerId.player);
+  const playerParams = useParams();
+  const playerIndex = getPlayer(players, playerParams.id);
 
   const playerObj = playerIndex >= 0 ? players[playerIndex] : {};
 
@@ -29,21 +29,12 @@ const PlayerDetail = () => {
 
 function getPlayer(players, playerId) {
   if (!players || players.length <= 0) return -1
-  playerId = playerId.toLowerCase();
+  playerId = parseInt(playerId);
 
-  let low = 0;
-  let high = players.length - 1;
-  let mid;
-
-  while (low <= high) {
-    mid = ~~((low + high) / 2);
-    if (players[mid].name.toLowerCase().localeCompare(playerId) < 0)
-      low = mid + 1;
-    else if (players[mid].name.toLowerCase().localeCompare(playerId) > 0)
-      high = mid - 1;
-    else
-      return mid;
+  for (let i = 0; i < players.length; i++){
+    if(parseInt(players[i].id) === playerId) return i
   }
+  
   return -1;
 }
 

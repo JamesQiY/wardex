@@ -1,28 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PageContext } from '../../hooks/PageContext';
 import Commanders from './Commanders';
 import Graph from '../Graph';
 import { Link } from 'react-router-dom';
 
-const labels = [
-  'Opening',
-  'Formation',
-  'Unit Comp',
-  'Economy',
-  'Speed',
-  'Tactics'];
-
+const labels = ['Opening', 'Formation', 'Unit Comp', 'Economy', 'Speed', 'Tactics'];
 
 // player Obj = {} with the fields 
 const Card = ({ playerObj, darkTheme }) => {
+  const states = useContext(PageContext)
+
+  const reset = () => {
+    states.setsearch('')
+  }
+
   let commanders = <></>;
   if (Object.keys(playerObj).length !== 0) {
     commanders = <Commanders commanderList={playerObj.commanders.split(',')} />
   }
+
+
   return (
     <div className="cards">
       <div className="player_title flex flex-col">
         {playerObj.name}
-        <Link to={"/player/" + playerObj.name}>
+        <Link to={"/player/" + playerObj.id} onClick={reset}>
           <button className="p-1 w-full text-sm dark:text-white text-black
           bg-red-400 dark:bg-red-500 rounded-lg shadow-lg">Details</button>
         </Link>
