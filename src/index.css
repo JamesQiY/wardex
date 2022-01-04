@@ -5,8 +5,8 @@
 @layer components {
   .sidebar_icon {
     @apply relative flex items-center justify-center h-10 w-10 sm:h-14 sm:w-14 my-4 mx-auto 
-    shadow-xl dark:shadow-md
-    bg-truegray-200 dark:bg-gray-800 text-red-400 rounded-3xl
+    shadow-sm dark:shadow-md
+    bg-neutral-200 dark:bg-neutral-800 text-red-400 rounded-3xl
     hover:bg-red-700 hover:rounded-xl
     transition-all duration-200 ease-linear;
   }
@@ -15,60 +15,50 @@
     @apply absolute w-auto h-auto m-2 p-2 min-w-max left-14 rounded-md 
     shadow-xl dark:shadow-md
     text-black dark:text-white 
-    bg-white dark:bg-gray-800
+    bg-white dark:bg-neutral-700
     text-lg z-50
     transition-all duration-100 scale-0 origin-left;
   }
 
-  .cards {
-    @apply
-    mx-0.5 my-2 p-1 max-w-xl min-w-full sm:min-w-lg xl:lg:min-w-xl 
-    flex flex-1 flex-col rounded-3xl 
-    border-2 dark:border-0 border-gray-500 border-opacity-20
-    bg-gray-100 dark:bg-truegray-700 shadow-md
-  }
-
   .player_title {
     @apply
-    p-3 m-1 rounded-3xl
-    text-3xl font-sans font-bold break-all
+    rounded-3xl
     text-black dark:text-white 
-    bg-gray-300 dark:bg-gray-900 shadow-md dark:shadow-lg;
+    bg-gray-300 dark:bg-neutral-800 shadow-md dark:shadow-lg;
   }
 
   .pill {
     @apply
     m-1.5 px-2 py-1 rounded-full text-xs
     flex text-center items-center justify-center
-    text-white dark:text-black bg-gray-700 dark:bg-gray-100
   }
 
   .page-container {
-    @apply h-full flex flex-row dark:bg-gray-600
+    @apply h-full flex flex-row dark:bg-neutral-500
   }
 }
 
 html, body, #root{
-  height: 100%;
+  height: 100vh;
 }
 
+.commander-shadow {
+  --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* width */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 0px;
-  margin-right: 1px;
+  width: 10px;
 }
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  opacity: 0;
-}
-
+ 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: lightslategrey;
+  background: #888; 
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: white;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

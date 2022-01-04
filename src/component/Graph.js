@@ -46,7 +46,7 @@ function getData(playerData, label, darkTheme) {
         data: ratingArr,
         backgroundColor: backgroundColor,
         borderColor: borderColor,
-        borderWidth: 2,
+        borderWidth: 3.5,
       },
     ],
   };

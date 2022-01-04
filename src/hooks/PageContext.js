@@ -7,6 +7,7 @@ export const PageContext = createContext();
 const PageProvider = (props) => {
   const [darkTheme, setDarkTheme] = enableDarkMode();
   const [players, setplayers] = useState([]);
+  const [search, setsearch] = useState("");
   useEffect(() => {
     const url = "https://wardex.herokuapp.com/all";
     axios.get(url).then(
@@ -16,9 +17,10 @@ const PageProvider = (props) => {
     )
   }, []);
 
+  const states = {darkTheme, setDarkTheme, players, search, setsearch}
+
   return (
-     // eslint-disable-next-line
-    <PageContext.Provider value={{darkTheme, setDarkTheme, players}}>
+    <PageContext.Provider value={states}>
       {props.children}
     </PageContext.Provider>
   );

@@ -1,5 +1,5 @@
 import { FaHome, FaSun, FaMoon, FaGithub, FaPen, FaInfo } from 'react-icons/fa';
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { PageContext } from '../hooks/PageContext';
 import { Link } from 'react-router-dom';
 
@@ -11,16 +11,19 @@ const Sidebar = () => {
   let setDarkTheme = states.setDarkTheme;
 
   return (
-    <div className='top-0 left-0 w-12 sm:w-16 h-full m-0 pt-4 flex flex-col flex-none bg-white dark:bg-gray-700 text-white shadow-lg'>
-      <Link to="/">
-        <SideBarIcon icon={<FaHome size={iconSize} />} text='Home' />
-      </Link>
-      <Link to="/About">
-        <SideBarIcon icon={<FaInfo size={iconSize} />} text='About/help' />
-      </Link>
-      <LinkIcon link='https://forms.gle/SevNUmM1a75Wy38LA' icon={<FaPen size={iconSize} />} text='Form' />
-      <LinkIcon link='https://github.com/JamesQiY/Wardex' icon={<FaGithub size={iconSize} />} text='Github' />
-      <ThemeIcon darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+    <div className='top-0 left-0 w-12 sm:w-16 h-full m-0 pt-4 flex flex-col flex-none 
+      bg-white dark:bg-neutral-700 text-white shadow-lg'>
+      <div className='h-full'>
+        <Link to="/">
+          <SideBarIcon icon={<FaHome size={iconSize} />} text='Home' />
+        </Link>
+        <Link to="/About">
+          <SideBarIcon icon={<FaInfo size={iconSize} />} text='About/help' />
+        </Link>
+        <LinkIcon link='https://forms.gle/SevNUmM1a75Wy38LA' icon={<FaPen size={iconSize} />} text='Form' />
+        <LinkIcon link='https://github.com/JamesQiY/Wardex' icon={<FaGithub size={iconSize} />} text='Github' />
+        <ThemeIcon darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      </div>
     </div>
   )
 };

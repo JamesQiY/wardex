@@ -1,15 +1,13 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  content: [
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        truegray: colors.trueGray,
-        lightBlue: colors.sky,
-      },
       fontFamily:{
         body: ['Helvetica']
       },
@@ -32,18 +30,7 @@ module.exports = {
         '350': '350px',
         '500': '500px',
       },
-      flex: {
-        nostrink: '1 0 auto',
-        one: '1'
-      },
-      zIndex:{
-        '-5': '-5',
-        '-10': '-10',
-      }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }

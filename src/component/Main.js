@@ -9,7 +9,7 @@ const Main = () => {
     <Routes > {/* The Routes decides which component to show based on the current URL.*/}
       <Route exact path='/' element={<Home/>}></Route>
       <Route exact path='/About' element={<About/>}></Route>
-      <Route exact path='/player/:player' element={<PlayerDetail/>}></Route>
+      <Route exact path='/player/:id' element={<PlayerDetail/>}></Route>
     </Routes>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="m-1 p-1 text-center w-full bg-white rounded-lg mt-auto">
+    <div className="mt-auto relative text-center w-full bg-white dark:bg-neutral-700 dark:text-white">
       Credit to <a href="https://chucklefish.org/">Chucklefish</a> for all images.
     </div>
   )
