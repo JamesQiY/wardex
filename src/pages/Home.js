@@ -1,4 +1,4 @@
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
 import { PageContext } from '../hooks/PageContext';
 
 import Header from '../component/Header';
@@ -15,10 +15,11 @@ const Home = () => {
   }
 
   return (
-    <div className="home-container flex-1 overflow-auto">
-      <div className='content-container flex flex-col items-center justify-center p-1'>
-        <Header />
-        <SearchBox placeholder='Search' handleChange={handleChange}/>
+    <div className="home-container flex-1 relative overflow-auto">
+      <div className='content-container h-full w-full flex flex-col items-center'>
+        <Header>
+          <SearchBox placeholder='Search' handleChange={handleChange} />
+        </Header>
         <PlayerCards />
         <Footer />
       </div>

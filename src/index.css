@@ -5,8 +5,8 @@
 @layer components {
   .sidebar_icon {
     @apply relative flex items-center justify-center h-10 w-10 sm:h-14 sm:w-14 my-4 mx-auto 
-    shadow-xl dark:shadow-md
-    bg-truegray-200 dark:bg-gray-800 text-red-400 rounded-3xl
+    shadow-sm dark:shadow-md
+    bg-neutral-200 dark:bg-neutral-800 text-red-400 rounded-3xl
     hover:bg-red-700 hover:rounded-xl
     transition-all duration-200 ease-linear;
   }
@@ -15,69 +15,50 @@
     @apply absolute w-auto h-auto m-2 p-2 min-w-max left-14 rounded-md 
     shadow-xl dark:shadow-md
     text-black dark:text-white 
-    bg-white dark:bg-gray-800
+    bg-white dark:bg-neutral-700
     text-lg z-50
     transition-all duration-100 scale-0 origin-left;
   }
 
-  .cards {
-    @apply
-    mx-0.5 my-2 p-1 max-w-xl min-w-full sm:min-w-lg xl:lg:min-w-xl 
-    flex flex-1 flex-col rounded-3xl 
-    border-2 dark:border-0 border-gray-500 border-opacity-20
-    bg-gray-100 dark:bg-truegray-700 shadow-md
-  }
-
   .player_title {
     @apply
-    p-3 m-1 rounded-3xl
-    text-3xl font-sans font-bold break-all
+    rounded-3xl
     text-black dark:text-white 
-    bg-gray-300 dark:bg-gray-900 shadow-md dark:shadow-lg;
+    bg-gray-300 dark:bg-neutral-800 shadow-md dark:shadow-lg;
   }
 
   .pill {
     @apply
     m-1.5 px-2 py-1 rounded-full text-xs
     flex text-center items-center justify-center
-    text-white dark:text-black bg-gray-700 dark:bg-gray-100
   }
 
   .page-container {
-    @apply h-full flex flex-row dark:bg-gray-600
+    @apply h-full flex flex-row dark:bg-neutral-500
   }
 }
 
 html, body, #root{
-  height: 100%;
+  height: 100vh;
 }
 
+.commander-shadow {
+  --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* width */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 0px;
-  margin-right: 1px;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  opacity: 0;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: lightslategrey;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: white;
-}
-
-::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 10px;
   width: 10px;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjEyMy4wNXB4IiBoZWlnaHQ9IjEyMy4wNXB4IiB2aWV3Qm94PSIwIDAgMTIzLjA1IDEyMy4wNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIzLjA1IDEyMy4wNTsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTEyMS4zMjUsMTAuOTI1bC04LjUtOC4zOTljLTIuMy0yLjMtNi4xLTIuMy04LjUsMGwtNDIuNCw0Mi4zOTlMMTguNzI2LDEuNzI2Yy0yLjMwMS0yLjMwMS02LjEwMS0yLjMwMS04LjUsMGwtOC41LDguNQ0KCQljLTIuMzAxLDIuMy0yLjMwMSw2LjEsMCw4LjVsNDMuMSw0My4xbC00Mi4zLDQyLjVjLTIuMywyLjMtMi4zLDYuMSwwLDguNWw4LjUsOC41YzIuMywyLjMsNi4xLDIuMyw4LjUsMGw0Mi4zOTktNDIuNGw0Mi40LDQyLjQNCgkJYzIuMywyLjMsNi4xLDIuMyw4LjUsMGw4LjUtOC41YzIuMy0yLjMsMi4zLTYuMSwwLTguNWwtNDIuNS00Mi40bDQyLjQtNDIuMzk5QzEyMy42MjUsMTcuMTI1LDEyMy42MjUsMTMuMzI1LDEyMS4zMjUsMTAuOTI1eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
-  background-size: 10px 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

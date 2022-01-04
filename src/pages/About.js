@@ -7,7 +7,7 @@ import AboutInfo from '../component/AboutInfo';
 const About = () => {
   return (
     <div className="home-container flex-1 overflow-auto">
-      <div className='content-container flex flex-col items-center justify-center p-1'>
+      <div className='content-container flex flex-col items-center justify-center h-full'>
         <Header />
         <AboutInfo />
         <Footer />

@@ -21,12 +21,13 @@ const Card = ({ playerObj, darkTheme }) => {
 
 
   return (
-    <div className="cards">
+    <div className="m-1 my-2 max-w-xl xl:lg:min-w-xl 
+      flex flex-1 flex-col rounded-3xl 
+      bg-gray-100 dark:bg-neutral-700 drop-shadow-lg">
       <div className="player_title flex flex-col">
-        {playerObj.name}
+        <div className='m-2 text-center text-3xl font-sans font-bold break-all'>{playerObj.name}</div>
         <Link to={"/player/" + playerObj.id} onClick={reset}>
-          <button className="p-1 w-full text-sm dark:text-white text-black
-          bg-red-400 dark:bg-red-500 rounded-lg shadow-lg">Details</button>
+          <div className="p-1 w-full text-center dark:text-white text-black bg-red-400 shadow-inner">Details</div>
         </Link>
       </div>
       <div className="info-container flex flex-col sm:flex-row items-center justify-center max-w-full">
@@ -46,7 +47,7 @@ const Card = ({ playerObj, darkTheme }) => {
           <Graph playerData={playerObj} label={labels} type={'basic'} darkTheme={darkTheme} key={darkTheme} />
         </div>
       </div>
-      <p className="m-1 p-2 break-words dark:text-white"> {playerObj.description} </p>
+      <p className="m-4 p-2 break-words dark:text-white"> {playerObj.description} </p>
     </div>
   )
 }

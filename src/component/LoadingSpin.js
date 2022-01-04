@@ -14,6 +14,7 @@ const LoadingSpin = () => {
     text-white bg-gray-700 rounded-md shadow-sm">
       {msg === 'loading'?<div className="animate-spin rounded-full h-12 w-12 border-b-4 border-white m-2"></div>: <></>}
       {msg}
+      <div>{'server might be waking up right now ...zzz'}</div>
     </div>
   )
 }

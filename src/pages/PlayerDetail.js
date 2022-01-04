@@ -4,8 +4,6 @@ import { PageContext } from '../hooks/PageContext';
 import { useParams } from 'react-router-dom'
 
 import DetailedCard from '../component/card_related/DetailedCard';
-import Footer from '../component/Footer';
-
 
 const PlayerDetail = () => {
   const states = useContext(PageContext)
@@ -18,11 +16,10 @@ const PlayerDetail = () => {
   const playerObj = playerIndex >= 0 ? players[playerIndex] : {};
 
   return (
-    <div className="home-container flex-1 overflow-auto">
-      <div className='content-container flex flex-col items-center justify-center p-1'>
+    <div className="home-container relative flex-1 overflow-auto">
+      <div className='content-container flex flex-col items-center p-1 h-full'>
         <DetailedCard darkTheme={darkTheme} player={playerObj} />
       </div>
-      <Footer />
     </div>
   )
 };
