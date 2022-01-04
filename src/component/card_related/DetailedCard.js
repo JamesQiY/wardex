@@ -16,8 +16,8 @@ const DetailedCard = ({ darkTheme, player }) => {
   }
 
   return (
-    <div className="player_cards w-full max-w-full h-full">
-      <div className="player_title p-4 text-center break-all"> {player.name} </div>
+    <div className="w-full max-w-full h-full">
+      <div className="p-4 text-center text-4xl font-bold break-all dark:text-white dark:bg-neutral-700 rounded-br-full"> {player.name} </div>
       <div className="my-2"> {commanders} </div>
       <div className="info-container flex flex-col items-center justify-center max-w-full">
 
@@ -39,9 +39,9 @@ const DetailedCard = ({ darkTheme, player }) => {
 
 
 
-        <div className="flex items-center justify-center dark:text-white">
-
-          <p className="m-8 p-2 break-words dark:text-white"> {player.description} </p>
+        <div className="m-8 flex flex-col items-center justify-center dark:text-white">
+          <div className='text-center font-bold text-2xl'>Description</div>
+          <p className="m-1 p-2 break-words"> {player.description} </p>
         </div>
 
 
