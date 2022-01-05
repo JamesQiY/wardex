@@ -3,6 +3,7 @@ import { PageContext } from '../../hooks/PageContext';
 import Commanders from './Commanders';
 import Graph from '../Graph';
 import { Link } from 'react-router-dom';
+import StatPills from './StatPills';
 
 const labels = ['Opening', 'Formation', 'Unit Comp', 'Economy', 'Speed', 'Tactics'];
 
@@ -35,11 +36,11 @@ const Card = ({ playerObj, darkTheme }) => {
           <div className="my-2"> {commanders} </div>
           <div className="flex flex-col items-center justify-center dark:text-white">
             <span>Strengths:</span>
-            <div className="pill bg-blue-600 dark:bg-blue-600 text-white dark:text-white shadow-lg"> {playerObj.strengths} </div>
+            <StatPills bg='bg-blue-600' stat={playerObj.strengths}/>
           </div>
           <div className="flex flex-col items-center justify-center dark:text-white">
             <span>Weaknesses:</span>
-            <div className="pill bg-red-600 dark:bg-red-600 text-white dark:text-white shadow-lg"> {playerObj.weaknesses} </div>
+            <StatPills bg='bg-red-600' stat={playerObj.weaknesses}/>
           </div>
 
         </div>

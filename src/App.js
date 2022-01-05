@@ -5,7 +5,7 @@ import PageProvider from './hooks/PageContext';
 
 function App() {
   return (
-    <div className="h-full page-container">
+    <div id='app' className="app h-full page-container">
       <PageProvider>
         <Sidebar/>
         <Main/>

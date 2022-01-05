@@ -17,7 +17,7 @@ const PlayerDetail = () => {
 
   return (
     <div className="home-container relative flex-1 overflow-auto">
-      <div className='content-container flex flex-col items-center p-1 h-full'>
+      <div className='content-container flex flex-col items-center h-full'>
         <DetailedCard darkTheme={darkTheme} player={playerObj} />
       </div>
     </div>
