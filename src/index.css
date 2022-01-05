@@ -29,7 +29,7 @@
 
   .pill {
     @apply
-    m-1.5 px-2 py-1 rounded-full text-xs
+    m-1.5 px-2 py-1.5 rounded-full text-xs
     flex text-center items-center justify-center
   }
 
