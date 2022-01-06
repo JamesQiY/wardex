@@ -1,6 +1,4 @@
 # Wardex
-https://jamesqiy.github.io/wardex/
-
 https://wardex-collection.vercel.app/
 
 An online collection of player stats of the Wargroove community.
