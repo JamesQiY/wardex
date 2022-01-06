@@ -1,5 +1,5 @@
 {
-  "hompage" : "https://jamesqiy.github.io/wardex/",
+  "hompage":".",
   "name": "client",
   "version": "0.1.0",
   "private": true,
