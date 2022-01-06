@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/wardex/static/css/main.586e6ac4.css",
-    "main.js": "/wardex/static/js/main.3d6b9780.js",
-    "index.html": "/wardex/index.html",
-    "main.586e6ac4.css.map": "/wardex/static/css/main.586e6ac4.css.map",
-    "main.3d6b9780.js.map": "/wardex/static/js/main.3d6b9780.js.map"
+    "main.css": "/static/css/main.e72eaa7e.css",
+    "main.js": "/static/js/main.dbf69950.js",
+    "index.html": "/index.html",
+    "main.e72eaa7e.css.map": "/static/css/main.e72eaa7e.css.map",
+    "main.dbf69950.js.map": "/static/js/main.dbf69950.js.map"
   },
   "entrypoints": [
-    "static/css/main.586e6ac4.css",
-    "static/js/main.3d6b9780.js"
+    "static/css/main.e72eaa7e.css",
+    "static/js/main.dbf69950.js"
   ]
 }
